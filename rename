@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# rename_files.sh
+# rename.sh
 # Script for renaming files with unwanted characters.
 # Based on Advanced Bash Scripting Guide, p. 799-800
 # Wrote with patiently help of Anon.
