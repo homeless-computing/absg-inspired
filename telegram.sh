@@ -30,8 +30,21 @@ LANG=C.UTF-8 DISPLAY=$DISPLAY chroot "$TARGET" /bin/bash <<EOF
 login $(id -un 1000)
 telegram-desktop
 EOF
+
+sleep 10
+
 if [[ "$TARGET_RESOLVCONF_EXISTS" == "true" ]]; then
 	mv "$TARGET_RESOLVCONF_OLD" "$TARGET_RESOLVCONF"
 fi
 umount --recursive "$TARGET"
 echo -e "\n\nEnd of chroot session.\n\n"
+
+#TODO:
+#1 чрутаемся в баш
+#2 слезаем с суперпользователя
+#3 запускаем телегу
+#4 убиваем телегу
+#5 возвращаемся в шелл
+#6 ждем, пока сдохнут дочерние процессы (можно срать в терминал обратным отсчётом)
+#7 выходим из чрута
+#8 отмонтируемся
