@@ -28,7 +28,7 @@ xhost +local:
 
 LANG=C.UTF-8 DISPLAY=$DISPLAY chroot "$TARGET" /bin/bash <<EOF
 login $(id -un 1000)
-telegram-desktop
+#telegram-desktop
 EOF
 
 sleep 10
